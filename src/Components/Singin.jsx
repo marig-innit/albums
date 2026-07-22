@@ -13,6 +13,10 @@ const Signin = () =>{
     const [success,setSuccess] = useState ("")
     const [error,setError] = useState ("")
 
+    // state for showing and hiding the password
+    const[showPassword,setShowPassword] = useState(false)
+
+
     // function to handlesubmit 
     const handlesubmit = async (e) =>{
         e.preventDefault()
@@ -51,7 +55,15 @@ const Signin = () =>{
                 <h1 className='text-danger'>{error}</h1>
                 <form action="" onSubmit={handlesubmit}>
                     <input type="email" className="form-control" placeholder="📤  Email" onChange={(e)=>setEmail(e.target.value)} /><br />
-                    <input type="password" className="form-control" placeholder="🔒  Password" onChange={(e)=>setPassword(e.target.value)} /><br />
+                    {/* <input type="password" className="form-control" placeholder="🔒  Password" onChange={(e)=>setPassword(e.target.value)} /><br /> */}
+                    <div className='input-group'>
+                        <input type={showPassword ? "text" : "password"} className='form-control' placeholder="🔑  Enter Password" onChange={(e)=>setPassword(e.target.value)} />
+                        <span className='input-group-text' style = {{cursor : "pointer"}}
+                        onClick = {()=>setShowPassword(!showPassword)} >
+                            {showPassword ? "🔒" : "👁️"}
+                        </span>
+                    </div>
+                    <br />
                     <button className="form-control bg-primary text-dark">Sign In</button>
                     <p>Don't have an account? <Link to="/signup">Sign Up 👥</Link></p>
                 </form>

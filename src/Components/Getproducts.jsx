@@ -10,6 +10,17 @@ const Getproducts  = () =>{
     const[products,setProducts] = useState ([])
     const[error,setError] = useState ("")
 
+    // state declaration for search 
+    const[search,setSearch] = useState("")
+
+    // state declaration for load more 
+    const[visibleCount,setVisibleCount] = useState(8)
+
+    // filter logic goes here 
+    const filtered_products = products.filter((item) => item.product_name.toLowerCase().includes(search.toLowerCase())||
+    item.product_description.toLowerCase().includes(search.toLowerCase())
+    );
+
     // function to get products
     const getproducts = async () =>{
         setLoading("Please wait...")
@@ -34,10 +45,13 @@ const imagepath = "https://mathenyu.alwaysdata.net/static/images/"
     return(
         <div className='row container-fluid justify-content justify-content'>
             {/* carousel goes here */}
-              <Carousel/>           
+              <Carousel/>    
+              <div className="row justify-content-center mt-3 mb-3">
+                <input className="form-control w-50" type="search" placeholder="Search Products..." value={search} onChange={(e)=> setSearch(e.target.value)}></input>  
+              </div>       
             <h1 className="text-secondary">Available Albums</h1>
             {/* map the products */}
-            {products.map(singleproduct=>(
+            {filtered_products.slice(0,visibleCount).map((singleproduct)=>(
                 
             <div className='col-md-3 p-3 mb-5'>
                 <div className='card shadow p-2'>
@@ -53,6 +67,14 @@ const imagepath = "https://mathenyu.alwaysdata.net/static/images/"
                 </div>
             </div>
             ))}
+            <div className='text-center mt-3'>
+                {visibleCount< filtered_products.length && (
+                    <button className='btn btn-primary' onClick={() => setVisibleCount(visibleCount + 8)}>
+                        Load More
+                    </button>
+                )}
+
+            </div>
         </div>
     )
 }

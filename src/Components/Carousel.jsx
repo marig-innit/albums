@@ -5,7 +5,7 @@ const Carousel = () => {
         <section class="row">
         <div class="col-md-12">
             <div class="carousel slide" data-bs-ride="carousel" id="mycarousel">
-                {/* <!-- divi?sion containing images  --> */}
+                {/* <!-- division containing images  --> */}
                   <div class="carousel-inner" style={{backgroundColor:"ButtonShadow"}}>
                     {/* <!-- div with image 1 --> */}
                       <div class="carousel-item active text-center">

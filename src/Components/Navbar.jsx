@@ -16,7 +16,7 @@ const Navbar = () => {
             {/* <!-- left links --> */}
              <div class="navbar-nav">
                 <a href="/" class="nav-link">Home</a>
-                <a href="/singin" class="nav-link">Signin</a>
+                <a href="/signin" class="nav-link">Signin</a>
                 <a href="/signup" class="nav-link">Signup</a>
                 <a href="/addproduct" class="nav-link">Addproduct</a>
                 <a href="" class="nav-link"></a>
