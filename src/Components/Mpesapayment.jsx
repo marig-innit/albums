@@ -9,7 +9,6 @@ const Mpesapayment = () =>{
     const imagepath = "https://mathenyu.alwaysdata.net/static/images/"
     // declare the states here 
     const [phone,setPhone] = useState("")
-    const [product_cost,setProductCost] = useState("")
     const [loading,setLoading] = useState("")
     const [success,setSuccess] = useState ("")
     const [error,setError] = useState("")

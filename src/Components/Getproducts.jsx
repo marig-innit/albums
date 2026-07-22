@@ -50,6 +50,10 @@ const imagepath = "https://mathenyu.alwaysdata.net/static/images/"
                 <input className="form-control w-50" type="search" placeholder="Search Products..." value={search} onChange={(e)=> setSearch(e.target.value)}></input>  
               </div>       
             <h1 className="text-secondary">Available Albums</h1>
+            {/* bind the states here  */}
+            <h1>{loading}</h1>
+            <h1>{error}</h1>
+
             {/* map the products */}
             {filtered_products.slice(0,visibleCount).map((singleproduct)=>(
                 
