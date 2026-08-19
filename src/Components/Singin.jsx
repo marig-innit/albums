@@ -33,6 +33,7 @@ const Signin = () =>{
             // redirect user to getproducts page 
             // NB:Upon login successful 
             if(response.data.user){
+                localStorage.setItem("user",JSON.stringify(response.data.user))
                 // it means login successfully
                 navigate("/") 
 

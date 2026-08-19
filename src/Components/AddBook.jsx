@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 
-const Addproduct = () =>{
+const AddBook = () =>{
     const [productname,setProductName] = useState("")
     const [productcategory,setProductCategory] = useState("")
     const [Productdescription,setProductDescription] = useState("")
@@ -35,7 +35,7 @@ const Addproduct = () =>{
     return(
         <div className="row justify-content-center mt-5">
             <div className="col-md-6 card shadow p-5">
-                <h1>Upload Products📦📦</h1>
+                <h1>Upload Books</h1>
                 {/* bind the states here */}
                 <h1 className="text-warning">{loading}</h1>
                 <h1 className="text-success">{success}</h1>
@@ -45,7 +45,7 @@ const Addproduct = () =>{
                     <input type="text" className="form-control" placeholder="🛍️ Enter Product Category" required onChange={(e)=>setProductCategory(e.target.value)}/><br />
                     <textarea name="" id="" className="form-control" placeholder="📝 Describe your Product" required onChange={(e)=>setProductDescription(e.target.value)}></textarea><br />
                     <input type="number" className="form-control" placeholder="💰 Enter Product Cost" onChange={(e)=>setProductCost(e.target.value)} /><br />
-                    <b>Browse/Upload Product Image</b>
+                    <b>Browse/Upload Book Image</b>
                     <input type="file" className="form-control" required accept="image/*" onChange={(e)=>setProductPhoto(e.target.files[0])}/><br />
                     <input type="submit" value ="Upload Product" className="btn  bg-primary text-white"/>
                 </form>
@@ -53,4 +53,4 @@ const Addproduct = () =>{
         </div>
     )
 }
-export default Addproduct
+export default AddBook

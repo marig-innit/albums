@@ -9,19 +9,19 @@ const Carousel = () => {
                   <div class="carousel-inner" style={{backgroundColor:"ButtonShadow"}}>
                     {/* <!-- div with image 1 --> */}
                       <div class="carousel-item active text-center">
-                        <img src="images/album photo1.avif" alt="album1" width="300"/>
+                        <img src="images/eg.jpg" alt="album1" width="80%"/>
                       </div>
                     {/* <!-- div with image 2  --> */}
                      <div class="carousel-item text-center">
-                        <img src="images/album photo2.avif" alt="album2" width="600px" class=""/>
+                        <img src="images/bm.jpg" alt="album2" width="80%" class=""/>
                      </div>
                     {/* <!-- div with image 3  --> */}
                      <div class="carousel-item text-center">
-                        <img src="images/album photo3.avif" alt="album3" width="600px"/>
+                        <img src="images/mh.jpg" alt="album3" width="80%"/>
                      </div>
                     {/* <!-- div with image 4  --> */}
                      <div class="carousel-item text-center">
-                        <img src="images/album photo4.avif" alt="album4" width="400px"/>
+                        <img src="images/hp.jpg" alt="album4" width="80%"/>
                      </div>
                   </div>
                 {/* <!-- previous control icon  --> */}

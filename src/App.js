@@ -4,12 +4,11 @@ import { BrowserRouter,Routes,Route,Link } from 'react-router-dom';
 import './App.css';
 import Signin from './Components/Singin';
 import Signup from './Components/Singup';
-import Addproduct from './Components/Addproduct';
-import Getproducts from './Components/Getproducts';
+import AddBook from './Components/AddBook';
+import GetBooks from './Components/GetBooks';
 import Mpesapayment from './Components/Mpesapayment';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-import Videos from './Components/Videos';
 
 function App() {
   return (
@@ -18,24 +17,23 @@ function App() {
       {/* navbar goes here */}
       <Navbar/>
       <header>
-        <h1 className='bg-dark text-danger'>Welcome to Sokogarden</h1>
+        <h1 className='bg-dark text-danger'>Welcome to </h1>
       </header>
       {/* Navigations */}
       <nav>
         <Link to="/signin" className='btn btn-outline-secondary'>Signin</Link>
         <Link to="/signup" className='btn btn-outline-secondary m-2'>Signup</Link>
-        <Link to="/Addproduct" className='btn btn-outline-secondary'>Addproduct</Link>
-        <Link to="/" className='btn btn-outline-secondary m-2'>Getproducts</Link>
+        <Link to="/Addproduct" className='btn btn-outline-secondary'>AddBook</Link>
+        <Link to="/" className='btn btn-outline-secondary m-2'>GetBooks</Link>
         
       </nav>
       {/* Routes goes here */}
       <Routes>
         <Route path='/signin' element={<Signin/>} />
         <Route path='/signup' element={<Signup/>} />
-        <Route path='/addproduct' element={<Addproduct/>} />
-        <Route path='/' element={<Getproducts/>} />
+        <Route path='/addproduct' element={<AddBook/>} />
+        <Route path='/' element={<GetBooks/>} />
         <Route path='/mpesa' element={<Mpesapayment/>} />
-        <Route path='/videos' element={<Videos/>} />
       </Routes>
 
       {/* footer goes here */}
