@@ -17,16 +17,16 @@ function App() {
       {/* navbar goes here */}
       <Navbar/>
       <header>
-        <h1 className='bg-dark text-danger'>Welcome to </h1>
+        <h1 className='bg-dark text-white'>Welcome to BookRack Store</h1>
       </header>
       {/* Navigations */}
-      <nav>
+      {/* <nav>
         <Link to="/signin" className='btn btn-outline-secondary'>Signin</Link>
         <Link to="/signup" className='btn btn-outline-secondary m-2'>Signup</Link>
         <Link to="/Addproduct" className='btn btn-outline-secondary'>AddBook</Link>
         <Link to="/" className='btn btn-outline-secondary m-2'>GetBooks</Link>
         
-      </nav>
+      </nav> */}
       {/* Routes goes here */}
       <Routes>
         <Route path='/signin' element={<Signin/>} />
@@ -36,8 +36,6 @@ function App() {
         <Route path='/mpesa' element={<Mpesapayment/>} />
       </Routes>
 
-      {/* footer goes here */}
-      <Footer/>
     </div>
     </BrowserRouter>
   );

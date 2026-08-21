@@ -2,6 +2,7 @@ import axios from 'axios'
 import {useState,useEffect} from 'react'
 import { useNavigate } from "react-router-dom"
 import Carousel from './Carousel'
+import Footer from './Footer'
 
 const GetBooks = () =>{
     let navigate = useNavigate()
@@ -62,13 +63,8 @@ console.log(products);
 const imagepath = "https://mathenyu.alwaysdata.net/static/images/"
     return(
         <div className='row container-fluid justify-content justify-content'>
-            {/* carousel goes here */}
-              <Carousel/>   
-              {/* sarch bar  */}
-              <div className="row justify-content-center mt-3 mb-3">
-                <input className="form-control w-50" type="search" placeholder="Search Products..." value={search} onChange={(e)=> setSearch(e.target.value)}></input>  
-              </div>  
-              {/* Categories  */}
+
+             {/* Categories  */}
               <div className="text-center mb-4">
                 {categories.map((item)=>(
                     <button 
@@ -78,6 +74,12 @@ const imagepath = "https://mathenyu.alwaysdata.net/static/images/"
                         {item}
                     </button>))}
               </div>     
+            {/* carousel goes here */}
+              <Carousel/>   
+              {/* sarch bar  */}
+              <div className="row justify-content-center mt-3 mb-3">
+                <input className="form-control w-50" type="search" placeholder="Search Products..." value={search} onChange={(e)=> setSearch(e.target.value)}></input>  
+              </div> 
 
               {/* show the selected category */}
               <h5 className="text-center text-primary mb-4">
@@ -114,6 +116,7 @@ const imagepath = "https://mathenyu.alwaysdata.net/static/images/"
             
 
             </div>
+            <Footer/>
         </div>
     )
 }

@@ -35,7 +35,7 @@ const Navbar = () => {
 
                 {user ? (
                   <>
-                  <span style={{marginLeft:"800px"}} className="nav_link">Welcome{user.username}</span>
+                  <span style={{marginLeft:"800px", marginTop : "10px"}} className="nav_link">Welcome {user.username}</span>
                   <button style={{marginLeft:"10px"}} onClick={logout} className="btn btn-success">Logout</button>
                   
                   </>
